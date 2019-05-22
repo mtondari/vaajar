@@ -1,0 +1,63 @@
+.company {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba($black, .8);
+
+    .c-logo {
+        text-align: center;
+    }
+}
+
+    .company-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: rgba($white, .6);
+        font-size: rem-calc(12);
+
+        .i-logo {
+            margin: 0 0 15px;
+        }
+        .i-detail {
+            text-align: center;
+
+            p {
+                font-size: rem-calc(24);
+            }
+        }
+    }
+
+@include breakpoint(medium down) {
+    .company {
+        width: 100%;
+        height: 20vh;
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 30px;
+        z-index: 1;
+
+        .c-logo {
+            height: 100%;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .company-info {
+        margin-top: 12vh;
+        flex-direction: row;
+        justify-content: center;
+
+        .i-logo {
+            margin: 0 15px 0 0;
+
+            svg {
+                width: 92px;
+            }
+        }
+    }
+}

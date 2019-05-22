@@ -1,0 +1,17 @@
+form {
+    input {
+        &[type] {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+    }
+
+    textarea {
+        font-size: 12px;
+        height: rem-calc(70);
+    }
+
+    .error {
+        border: 1px solid $danger;
+    }
+}

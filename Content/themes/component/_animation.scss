@@ -1,0 +1,36 @@
+.scr-animation {
+    position: fixed;
+    bottom: #{$body-padding * 2}px;
+    right: #{$body-padding * 2}px;
+    background: transparent;
+    z-index: 1;
+
+    span {
+        color: #fff;
+        top: -11px;
+        left: 26px;    
+        position: absolute;
+        font-size: 14px;
+    }
+    
+    #arrow {
+        transform: translateX(-50%);
+        left: 50%;
+        position: absolute;
+        animation: moveY 1.5s infinite linear;
+    }
+}
+
+@keyframes moveY {
+    0% {
+        top: 15px;
+    }
+
+    50% {
+        top: 25px;
+    }
+
+    100% {
+        top: 15px;
+    }
+}

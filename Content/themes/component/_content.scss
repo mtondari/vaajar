@@ -1,0 +1,104 @@
+.content {
+    opacity: 0;
+    text-align: left;
+    font-size: rem-calc(12);
+    transition: opacity linear 700ms;
+    padding: rem-calc(30 30);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .c-header {
+        color: $gold;
+        margin-bottom: rem-calc(50);
+
+        &.h_special {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: rem-calc(30);
+            font-weight: bold;
+            line-height: 1;
+            margin: 0;
+        }
+
+        .h-number {
+            font-size: rem-calc(45);
+            opacity: .3;
+            font-weight: bold;
+            line-height: 1;
+        }
+    }
+
+    .c-desc {
+        font-size: rem-calc(13);
+        color: $white;
+        margin-bottom: rem-calc(40);
+
+        p {
+            border-left: 2px solid rgba($white, 0.4);
+            padding-left: 10px;
+            margin: 0;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        .d_special {
+            text-align: center;
+            font-size: 13px;
+            border: 0;
+            padding: 0;
+        }
+    }
+
+    .c-info {
+        .i-head {
+            font-weight: bold;
+            font-size: rem-calc(16);
+            color: $gold;
+            margin-bottom: rem-calc(5);
+        }
+
+        .i-item {
+            margin-bottom: rem-calc(20);
+            color: $white;
+
+            p {
+                margin: 0;
+            }
+
+            span {
+                padding-right: 5px;
+
+                &:not(:nth-child(2)) {
+                    padding-left: 6px;
+                    border-left: 1px solid $white;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(large) {
+        padding: rem-calc(30 45);
+    }
+
+    @include breakpoint(medium down) {
+        justify-content: flex-start;
+
+        &._smallMorePadd {
+            padding-top: 35vh;
+        }
+    }
+}
+
+//Add animate to content when scrolling
+._activeContent {
+    .content {
+        opacity: 1;
+    }
+}

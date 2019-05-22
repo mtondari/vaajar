@@ -1,0 +1,27 @@
+@import 'foundation6.5.3/scss/foundation';
+@import 'settings';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Helpers
+@include foundation-visibility-classes;
+
+//utility
+@import 'utility/variable';
+
+//foundation-override
+@import 'foundation-override/global-style';
+@import 'foundation-override/button';
+@import 'foundation-override/form';
+
+//component
+@import 'component/container';
+@import 'component/sections';
+@import 'component/content';
+@import 'component/company';
+@import 'component/tabs';
+@import 'component/navigator';
+@import 'component/animation';

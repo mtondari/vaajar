@@ -1,0 +1,50 @@
+.section {
+    height: 100%;
+    position: relative;
+    background: $black no-repeat center;
+    background-size: cover;
+    z-index: 0;
+
+    &.s_home {
+        background-image: url(../image/Home_bg.jpg);
+        
+        .button {
+            align-self: center;
+        }
+    }
+
+    &.s_resindential {
+        background-image: url(../image/RESIDENTIAL_bg.jpg);
+    }
+
+    &.s_commercial {
+        background-image: url(../image/Commercial_bg.jpg);
+    }
+
+    &.s_camera {
+        background-image: url(../image/Camera_bg.jpg);
+    }
+
+    &.s_safe {
+        background-image: url(../image/SAFE_bg.jpg);
+    }
+
+    &.s_electric {
+        background-image: url(../image/Electric_bg.jpg);
+    }
+
+    &.s_form {
+        background-image: url(../image/Contact_bg.jpg);
+    }
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        position: absolute;
+        background: rgba($black, .7);
+        z-index: -1;
+    }
+}

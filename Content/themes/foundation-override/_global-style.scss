@@ -1,0 +1,54 @@
+* {
+    outline: 0 !important;
+}
+
+html {
+    @include breakpoint(small only) {
+        font-size: 85%;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: $white;
+}
+
+main {
+    position: relative;
+
+    aside {
+        z-index: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+@include breakpoint(large) {
+    body {
+        padding: rem-calc($body-padding);
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    main {
+        height: 100%;
+        overflow: auto;
+        position: relative;
+    
+        aside {
+            padding: 45px;
+            width: 260px;
+            height: calc(100% - #{$body-padding * 2}px);
+            top: rem-calc($body-padding);
+            left: rem-calc($body-padding);
+            position: fixed;
+
+            img {
+                height: auto;
+            }
+        }
+    }
+}

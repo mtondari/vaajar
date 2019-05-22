@@ -1,0 +1,34 @@
+.nav-slide {
+    position: fixed;
+    top: 50%;
+    right: rem-calc($body-padding);
+    transform: translateY(-50%);
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    a {
+        color: rgba($white, .3);
+        font-size: 14px;
+        padding: 8px 70px 8px 0;
+        position: relative;
+        text-align: right;
+
+        &.is-active {
+            color: $white;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            border-bottom: 2px solid;
+            border-color: inherit;
+            width: 60px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            position: absolute;
+        }
+    }
+}

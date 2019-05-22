@@ -1,0 +1,12 @@
+.button {
+    width: fit-content;
+    padding: 15px 10px;
+    color: $white;
+    border-radius: 3px;
+    font-size: rem-calc(13);
+    cursor: pointer;
+    
+    &.btn_hollow {
+        border: 2px solid $white; 
+    }
+}
